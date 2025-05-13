@@ -1,5 +1,5 @@
 <?php
 
-use Oneduo\LaravelCloudfrontCookies\Tests\TestCase;
+use Creacoon\LaravelCloudfrontCookies\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

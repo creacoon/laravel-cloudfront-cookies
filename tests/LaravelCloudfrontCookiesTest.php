@@ -1,6 +1,6 @@
 <?php
 
-use Oneduo\LaravelCloudfrontCookies\Facades\LaravelCloudfrontCookies;
+use Creacoon\LaravelCloudfrontCookies\Facades\LaravelCloudfrontCookies;
 
 it('generates signed cookies', function () {
     $cookies = LaravelCloudfrontCookies::resource('http*://localhost/*')

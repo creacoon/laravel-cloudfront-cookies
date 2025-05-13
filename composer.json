@@ -16,7 +16,7 @@
     }
   ],
   "require": {
-    "php": "^8.1",
+    "php": "^8.3",
     "aws/aws-sdk-php": "^3.275",
     "illuminate/contracts": "^9.0|^10.0",
     "spatie/laravel-package-tools": "^1.14.0"
@@ -24,7 +24,7 @@
   "require-dev": {
     "laravel/pint": "^1.0",
     "nunomaduro/collision": "^7.9",
-    "nunomaduro/larastan": "^2.0.1",
+    "larastan/larastan": "^2.0.1",
     "orchestra/testbench": "^8.0",
     "pestphp/pest": "^2.0",
     "pestphp/pest-plugin-arch": "^2.0",
@@ -36,12 +36,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Oneduo\\LaravelCloudfrontCookies\\": "src/"
+      "Creacoon\\LaravelCloudfrontCookies\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Oneduo\\LaravelCloudfrontCookies\\Tests\\": "tests/"
+      "Creacoon\\LaravelCloudfrontCookies\\Tests\\": "tests/"
     }
   },
   "scripts": {

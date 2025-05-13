@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Oneduo\LaravelCloudfrontCookies;
+namespace Creacoon\LaravelCloudfrontCookies;
 
 use Aws\CloudFront\CloudFrontClient;
 use Exception;
@@ -62,8 +62,8 @@ JSON;
     {
         return $this->client->getSignedCookie([
             'policy' => $this->policy,
-            'private_key' => config('cloudfront.private_key_path'),
-            'key_pair_id' => config('cloudfront.key_pair_id'),
+            'private_key' => config('cloudfront-cookies.private_key_path'),
+            'key_pair_id' => config('cloudfront-cookies.key_pair_id'),
         ]);
     }
 }

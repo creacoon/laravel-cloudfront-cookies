@@ -1,11 +1,11 @@
 <?php
 
-namespace Oneduo\LaravelCloudfrontCookies\Tests;
+namespace Creacoon\LaravelCloudfrontCookies\Tests;
 
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Support\Facades\Route;
-use Oneduo\LaravelCloudfrontCookies\Http\Middleware\CloudfrontSignedCookiesMiddleware;
-use Oneduo\LaravelCloudfrontCookies\LaravelCloudfrontCookiesServiceProvider;
+use Creacoon\LaravelCloudfrontCookies\Http\Middleware\CloudfrontSignedCookiesMiddleware;
+use Creacoon\LaravelCloudfrontCookies\LaravelCloudfrontCookiesServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
