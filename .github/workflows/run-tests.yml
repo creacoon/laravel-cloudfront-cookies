@@ -47,5 +47,9 @@ jobs:
       - name: List Installed Dependencies
         run: composer show -D
 
+      - name: Create private key
+        run: |
+          openssl genrsa -out private.key.pem
+
       - name: Execute tests
         run: vendor/bin/pest --ci
