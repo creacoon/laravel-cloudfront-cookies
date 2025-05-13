@@ -2,7 +2,7 @@
   "name": "creacoon/laravel-cloudfront-cookies",
   "description": "A tiny utility to generate signed cookies to be used with AWS Cloudfront",
   "keywords": [
-    "Oneduo",
+    "Creacoon",
     "laravel",
     "laravel-cloudfront-cookies"
   ],
@@ -61,10 +61,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Oneduo\\LaravelCloudfrontCookies\\LaravelCloudfrontCookiesServiceProvider"
+        "Creacoon\\LaravelCloudfrontCookies\\LaravelCloudfrontCookiesServiceProvider"
       ],
       "aliases": {
-        "LaravelCloudfrontCookies": "Oneduo\\LaravelCloudfrontCookies\\Facades\\LaravelCloudfrontCookies"
+        "LaravelCloudfrontCookies": "Creacoon\\LaravelCloudfrontCookies\\Facades\\LaravelCloudfrontCookies"
       }
     }
   },
