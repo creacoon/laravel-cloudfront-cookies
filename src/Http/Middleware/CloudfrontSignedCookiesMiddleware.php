@@ -6,9 +6,9 @@ namespace Creacoon\LaravelCloudfrontCookies\Http\Middleware;
 
 use Carbon\CarbonInterval;
 use Closure;
+use Creacoon\LaravelCloudfrontCookies\Facades\LaravelCloudfrontCookies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-use Creacoon\LaravelCloudfrontCookies\Facades\LaravelCloudfrontCookies;
 
 class CloudfrontSignedCookiesMiddleware
 {

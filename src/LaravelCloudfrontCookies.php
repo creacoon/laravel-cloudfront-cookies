@@ -16,9 +16,7 @@ class LaravelCloudfrontCookies
 
     public string $policy;
 
-    public function __construct(public readonly CloudFrontClient $client)
-    {
-    }
+    public function __construct(public readonly CloudFrontClient $client) {}
 
     public function resource(string $resource): static
     {
@@ -34,7 +32,7 @@ class LaravelCloudfrontCookies
         return $this;
     }
 
-    public function policy(string $policy = null): static
+    public function policy(?string $policy = null): static
     {
         if (! isset($this->resource, $this->expires_at)) {
             throw new Exception('resource and expires_at must be set before calling policy()');

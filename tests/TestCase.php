@@ -2,10 +2,10 @@
 
 namespace Creacoon\LaravelCloudfrontCookies\Tests;
 
-use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
-use Illuminate\Support\Facades\Route;
 use Creacoon\LaravelCloudfrontCookies\Http\Middleware\CloudfrontSignedCookiesMiddleware;
 use Creacoon\LaravelCloudfrontCookies\LaravelCloudfrontCookiesServiceProvider;
+use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

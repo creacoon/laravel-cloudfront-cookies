@@ -1,6 +1,7 @@
 <?php
 
 use Creacoon\LaravelCloudfrontCookies\Http\Middleware\CloudfrontSignedCookiesMiddleware;
+
 use function Pest\Laravel\call;
 use function Pest\Laravel\get;
 
