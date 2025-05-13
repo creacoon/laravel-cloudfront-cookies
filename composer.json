@@ -1,12 +1,12 @@
 {
-  "name": "oneduo/laravel-cloudfront-cookies",
+  "name": "creacoon/laravel-cloudfront-cookies",
   "description": "A tiny utility to generate signed cookies to be used with AWS Cloudfront",
   "keywords": [
     "Oneduo",
     "laravel",
     "laravel-cloudfront-cookies"
   ],
-  "homepage": "https://github.com/oneduo/laravel-cloudfront-cookies",
+  "homepage": "https://github.com/creacoon/laravel-cloudfront-cookies",
   "license": "MIT",
   "authors": [
     {
