@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'version' => env('CLOUDFRONT_VERSION', 'latest'),
 
-    'region' => env('CLOUDFRONT_REGION'),
+    'region' => env('CLOUDFRONT_REGION', 'us-east-1'),
 
     'key_pair_id' => env('CLOUDFRONT_KEY_PAIR_ID'),
 
@@ -20,5 +20,5 @@ return [
         'value' => 2,
     ],
 
-    'cookies_domain' => 'localhost',
+    'cookies_domain' => env('CLOUDFRONT_COOKIES_DOMAIN'),
 ];
