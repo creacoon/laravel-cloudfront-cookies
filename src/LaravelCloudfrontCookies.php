@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Oneduo\LaravelCloudfrontCookies;
+namespace Creacoon\LaravelCloudfrontCookies;
 
 use Aws\CloudFront\CloudFrontClient;
 use Exception;
@@ -16,9 +16,7 @@ class LaravelCloudfrontCookies
 
     public string $policy;
 
-    public function __construct(public readonly CloudFrontClient $client)
-    {
-    }
+    public function __construct(public readonly CloudFrontClient $client) {}
 
     public function resource(string $resource): static
     {
@@ -34,7 +32,7 @@ class LaravelCloudfrontCookies
         return $this;
     }
 
-    public function policy(string $policy = null): static
+    public function policy(?string $policy = null): static
     {
         if (! isset($this->resource, $this->expires_at)) {
             throw new Exception('resource and expires_at must be set before calling policy()');
@@ -62,8 +60,8 @@ JSON;
     {
         return $this->client->getSignedCookie([
             'policy' => $this->policy,
-            'private_key' => config('cloudfront.private_key_path'),
-            'key_pair_id' => config('cloudfront.key_pair_id'),
+            'private_key' => config('cloudfront-cookies.private_key_path'),
+            'key_pair_id' => config('cloudfront-cookies.key_pair_id'),
         ]);
     }
 }

@@ -16,7 +16,7 @@
     backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="Oneduo Test Suite">
+        <testsuite name="Creacoon Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

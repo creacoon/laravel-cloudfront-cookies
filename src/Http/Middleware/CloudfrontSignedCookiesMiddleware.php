@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Oneduo\LaravelCloudfrontCookies\Http\Middleware;
+namespace Creacoon\LaravelCloudfrontCookies\Http\Middleware;
 
 use Carbon\CarbonInterval;
 use Closure;
+use Creacoon\LaravelCloudfrontCookies\Facades\LaravelCloudfrontCookies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-use Oneduo\LaravelCloudfrontCookies\Facades\LaravelCloudfrontCookies;
 
 class CloudfrontSignedCookiesMiddleware
 {
@@ -24,10 +24,10 @@ class CloudfrontSignedCookiesMiddleware
             return $next($request);
         }
 
-        $resource = config('cloudfront.resource');
+        $resource = config('cloudfront-cookies.resource');
 
-        $intervalValue = config('cloudfront.cookies_expiration.value');
-        $intervalUnit = config('cloudfront.cookies_expiration.unit');
+        $intervalValue = config('cloudfront-cookies.cookies_expiration.value');
+        $intervalUnit = config('cloudfront-cookies.cookies_expiration.unit');
 
         $interval = CarbonInterval::fromString($intervalValue.$intervalUnit);
 
@@ -38,7 +38,7 @@ class CloudfrontSignedCookiesMiddleware
             ->policy()
             ->get();
 
-        $host = config('cloudfront-cookies.cookie_domain');
+        $host = config('cloudfront-cookies-cookies.cookie_domain');
 
         collect($cookies)->each(function (string $value, string $name) use ($host, $interval) {
             $cookie = Cookie::make($name, $value, minutes: (int) $interval->totalMinutes, domain: $host);

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Oneduo\LaravelCloudfrontCookies;
+namespace Creacoon\LaravelCloudfrontCookies;
 
 use Aws\CloudFront\CloudFrontClient;
 use Spatie\LaravelPackageTools\Package;
@@ -14,15 +14,15 @@ class LaravelCloudfrontCookiesServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-cloudfront-cookies')
-            ->hasConfigFile('cloudfront');
+            ->hasConfigFile('cloudfront-cookies');
     }
 
     public function packageBooted(): void
     {
         $this->app->singleton(CloudFrontClient::class, function () {
             return new CloudFrontClient([
-                'version' => config('cloudfront.version'),
-                'region' => config('cloudfront.region'),
+                'version' => config('cloudfront-cookies.version'),
+                'region' => config('cloudfront-cookies.region'),
             ]);
         });
     }
