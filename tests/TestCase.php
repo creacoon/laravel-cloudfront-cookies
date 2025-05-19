@@ -8,7 +8,6 @@ use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Orchestra\Testbench\TestCase as Orchestra;
-use phpDocumentor\Reflection\File;
 
 class TestCase extends Orchestra
 {
