@@ -7,6 +7,8 @@ namespace Creacoon\LaravelCloudfrontCookies;
 use Aws\CloudFront\CloudFrontClient;
 use Exception;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
 
 class LaravelCloudfrontCookies
 {
@@ -58,9 +60,18 @@ JSON;
 
     public function get(): array
     {
+        $private_key = Cache::remember('laravel_cloudfront_cookies_private_key',
+            3600 * 24,
+            fn () => Storage::disk(config('cloudfront-cookies.private_key_storage'))->get(config('cloudfront-cookies.private_key_path'))
+        );
+
+        if (! $private_key) {
+            throw new Exception('private key not found');
+        }
+
         return $this->client->getSignedCookie([
             'policy' => $this->policy,
-            'private_key' => config('cloudfront-cookies.private_key_path'),
+            'private_key' => $private_key,
             'key_pair_id' => config('cloudfront-cookies.key_pair_id'),
         ]);
     }

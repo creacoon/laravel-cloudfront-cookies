@@ -11,6 +11,8 @@ return [
 
     'private_key_path' => env('CLOUDFRONT_PRIVATE_KEY_PATH'),
 
+    'private_key_storage' => env('CLOUDFRONT_PRIVATE_KEY_STORAGE'),
+
     'domain' => env('CLOUDFRONT_DOMAIN'),
 
     'resource' => env('CLOUDFRONT_RESOURCE', 'http*://localhost/*'),
