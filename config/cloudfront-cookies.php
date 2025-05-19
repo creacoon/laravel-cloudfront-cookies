@@ -7,11 +7,11 @@ return [
 
     'region' => env('CLOUDFRONT_REGION', 'us-east-1'),
 
-    'key_pair_id' => env('CLOUDFRONT_KEY_PAIR_ID'),
+    'key_pair_id' => env('CLOUDFRONT_KEY_PAIR_ID', ''),
 
-    'private_key_path' => env('CLOUDFRONT_PRIVATE_KEY_PATH'),
+    'private_key_path' => env('CLOUDFRONT_PRIVATE_KEY_PATH', ''),
 
-    'private_key_storage' => env('CLOUDFRONT_PRIVATE_KEY_STORAGE'),
+    'private_key_storage' => env('CLOUDFRONT_PRIVATE_KEY_STORAGE', 'local'),
 
     'domain' => env('CLOUDFRONT_DOMAIN'),
 
