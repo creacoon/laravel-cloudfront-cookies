@@ -20,8 +20,8 @@ class CloudfrontSignedCookiesMiddleware
             config('cloudfront-cookies.key_pair_id') === '' ||
             config('cloudfront-cookies.private_key_path') === '' ||
             $cookies->every(function ($cookie) use ($request) {
-            return $request->hasCookie($cookie);
-        });
+                return $request->hasCookie($cookie);
+            });
 
         if ($shouldNotSign) {
             return $next($request);
