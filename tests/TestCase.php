@@ -32,7 +32,6 @@ class TestCase extends Orchestra
 
     protected function getEnvironmentSetUp($app): void
     {
-        $file =
         Storage::disk('local')->put('tests/test_private_key.pem', '-----BEGIN PRIVATE KEY-----
 MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCZBUqdtCv8luW1
 iV3JXPq9IDjKlLvsmnYU7RgZlNfkJpqdM21gDgD2VFM9PQvmSuSsBqLS9E18zs4N
