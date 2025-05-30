@@ -45,6 +45,34 @@ php artisan vendor:publish --tag="laravel-cloudfront-cookies-views"
 
 Add the middleware to set the cookies needed for AWS CloudFront
 
+## Excluding CloudFront Cookies from Laravel Encryption
+
+Laravel encrypts cookies by default for security. However, CloudFront signed cookies must remain unencrypted to function properly.
+
+### Configuration Steps
+
+1. **Locate the EncryptCookies middleware**
+    - Path: `app/Http/Middleware/EncryptCookies.php`
+
+2. **Add CloudFront cookies to the exclusion list**
+    - Update the `$except` array to include the three CloudFront cookie names:
+
+```php
+class EncryptCookies extends Middleware
+{
+    /**
+     * The names of the cookies that should not be encrypted.
+     *
+     * @var array
+     */
+    protected $except = [
+        'CloudFront-Key-Pair-Id',
+        'CloudFront-Policy',
+        'CloudFront-Signature',
+    ];
+}
+```
+
 ## Testing
 
 Generate a private key
