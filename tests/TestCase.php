@@ -61,6 +61,7 @@ XJJYb+eHfJotE3g5AundYSbK4io85p550SgJk+io4ht/Rg8c57KG3J1vqZr7qpwt
 aHhk2PE8H+YXPht4mD0Xi85k
 -----END PRIVATE KEY-----');
         config()->set('cloudfront-cookies', [
+            'region' => 'us-east-1',
             'key_pair_id' => 'AA12345678',
             'private_key_path' => 'tests/test_private_key.pem',
             'private_key_storage' => 'local',
