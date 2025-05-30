@@ -13,8 +13,6 @@ return [
 
     'private_key_storage' => env('CLOUDFRONT_PRIVATE_KEY_STORAGE', 'local'),
 
-    'domain' => env('CLOUDFRONT_DOMAIN'),
-
     'resource' => env('CLOUDFRONT_RESOURCE', 'http*://localhost/*'),
 
     'cookies_expiration' => [
